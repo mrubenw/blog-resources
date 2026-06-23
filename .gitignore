@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+
+# Environments
+.env
+.venv/
+env/
+
+# Pixi
+.pixi/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (each article fetches its own)
+articles/*/data/
+!articles/*/data/.gitkeep
+
+# Milvus
+*.db
+*.db.lock
+
+# OS
+.DS_Store
+Thumbs.db
