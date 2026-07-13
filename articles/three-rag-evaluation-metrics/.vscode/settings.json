@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": ".pixi/envs/default/bin/python",
+  "jupyter.kernels.filter": []
+}

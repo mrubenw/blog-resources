@@ -1,0 +1,38 @@
+[project]
+name = "three-rag-evaluation-metrics"
+version = "0.1.0"
+description = "Three RAG Evaluation Metrics — faithfulness, context relevance, and answer relevance with Claude"
+requires-python = ">=3.9"
+
+# --- pixi ---
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "osx-64", "linux-64"]
+
+[tool.pixi.system-requirements]
+macos = "14.0"
+
+[tool.pixi.dependencies]
+python = ">=3.9,<3.13"
+
+[tool.pixi.pypi-dependencies]
+anthropic = ">=0.40"
+torch = ">=2.0"
+torchvision = ">=0.15"
+clip = { git = "https://github.com/openai/CLIP.git" }
+pymilvus = ">=2.4,<3.0"
+milvus-lite = ">=2.4,<3.0"
+datasets = ">=2.19"
+tqdm = ">=4.65"
+numpy = ">=1.24,<2.0"
+pillow = ">=10.0"
+matplotlib = ">=3.7"
+pandas = ">=1.5"
+python-dotenv = ">=1.0"
+jupyterlab = ">=4.0"
+ipykernel = ">=6.0"
+multimodal-rag = { path = "../building-multimodal-rag", editable = true }
+
+[tool.pixi.tasks]
+notebook = "jupyter lab notebooks/"

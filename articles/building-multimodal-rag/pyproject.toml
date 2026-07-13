@@ -17,6 +17,9 @@ packages = ["src/multimodal_rag"]
 channels = ["conda-forge"]
 platforms = ["osx-arm64", "osx-64", "linux-64"]
 
+[tool.pixi.system-requirements]
+macos = "14.0"
+
 [tool.pixi.dependencies]
 python = ">=3.9,<3.13"
 
@@ -25,8 +28,8 @@ torch = ">=2.0"
 torchvision = ">=0.15"
 clip = { git = "https://github.com/openai/CLIP.git" }
 anthropic = ">=0.40"
-pymilvus = ">=2.4"
-milvus-lite = ">=2.4"
+pymilvus = ">=2.4,<3.0"
+milvus-lite = ">=2.4,<3.0"
 datasets = ">=2.19"
 pillow = ">=10.0"
 matplotlib = ">=3.7"

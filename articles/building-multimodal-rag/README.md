@@ -22,6 +22,20 @@ pixi run test       # unit tests (no API key needed)
 pixi run notebook   # JupyterLab
 ```
 
+### Using the pixi env as a kernel in VS Code / another IDE
+
+`pixi run notebook` launches JupyterLab from inside the pixi env, so it already uses the right
+kernel. If you instead open the notebook directly in an IDE (e.g. VS Code's Jupyter extension),
+register the pixi env as a named ipykernel so it shows up in the kernel picker:
+
+```bash
+pixi run python -m ipykernel install --user --name multimodal-rag --display-name "Python (multimodal-rag pixi)"
+```
+
+Then in the notebook, select **"Python (multimodal-rag pixi)"** as the kernel (top-right kernel
+picker in VS Code, or Kernel → Change Kernel in Jupyter). Re-select it any time the IDE seems to
+be running against a stale environment.
+
 ## Architecture
 
 ```
